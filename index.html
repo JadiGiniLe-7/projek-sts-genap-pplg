@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Ronda Scheduler</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#tentang">Panduan</a></li>
+            <li><a href="#app">App</a></li>
+        </ul>
+    </nav>
+
+    <div class="jumbotron">
+        <h1>Smart Ronda Scheduler</h1>
+        <p>Selamat datang di web Smart Ronda Scheduler!</p>
+    </div>
+</header>
+
+<main>
+    <div id="konten">
+        <article class="kartu" id="tentang">
+            <h2>Panduan</h2>
+            <p>
+                Web ini adalah sebuah web untuk membuat
+                jadwal ronda otomatis. Web ini dapat memudahkan
+                dalam pembuatan jadwal ronda di kampung-kampung 
+                ataupun di komplek perumahan yang belum mempunyai 
+                sistem keamanan ronda keliling. Berikut adalah 
+                panduan cara menggunakan web ini.
+            </p>
+            <h3>Cara membuat jadwal ronda</h3>
+            <p>
+                1. Isi nama warga yang akan ditugaskan di kolom <b style="color: #06b6d4;">Input Warga</b>.<br>
+                2. Setelah mengisi nama, klik tombol <b style="color: #06b6d4;">Tambah Warga</b>.<br>
+                3. Lalu, klik tombol <b style="color: #06b6d4;">Buat Jadwal 1 Bulan</b> (jumlah warga minimal harus 2 agar bisa membuat jadwal).<br>
+                4. Selamat! jadwal ronda sudah dibuat untuk 1 bulan kedepan, cukup scroll ke bawah untuk melihat jadwal lengkapnya.
+            </p>
+            <h3>Cara mengedit warga</h3>
+            <p>
+                <b>Mengubah nama warga</b><br><br>
+                Jika ingin mengubah nama warga, klik tombol <b style="color: #06b6d4;">Edit</b>,
+                setelah itu ubah nama di kolom input. Jika sudah selesai, jangan lupa klik tombol <b style="color: #06b6d4;">Update</b>
+                untuk memperbarui nama warga.<br><br>
+                <b>Menghapus warga</b><br><br>
+                Untuk menghapus warga, klik tombol <b style="color: #ef4444;">Hapus</b> di kolom aksi.
+            </p>
+            <h3>Cara melihat petugas hari ini</h3>
+            <p>
+                Untuk melihat petugas hari ini, cukup klik tombol <b style="color: #06b6d4;">Petugas Hari Ini</b>, maka akan ada pemberitahuan
+                tentang siapa yang bertugas hari ini.
+            </p>
+            <h3>Cara mereset jadwal</h3>
+            <p>
+                Untuk mereset jadwal, klik tombol <b style="color: #f59e0b;">Reset Jadwal</b>. 
+            </p>
+        </article>
+    </div>
+</main>
+
+<div class="container" id="app">
+
+    <h1>Smart Ronda Scheduler</h1>
+
+    <div id="tanggal" class="info"></div>
+
+<div class="input">
+    <h3>Input Warga</h3>
+
+    <label>Nama:</label><br>
+    <input type="text" id="nama"><br><br>
+
+    <div class="buttons">
+    <button onclick="tambahWarga()">Tambah Warga</button>
+    <button onclick="updateWarga()">Update</button>
+    <button onclick="buatJadwal()">Buat Jadwal 1 Bulan</button>
+    <button onclick="cekHariIni()">Petugas Hari Ini</button>
+    <button onclick="resetJadwal()" class="reset">Reset Jadwal</button>
+    </div>
+
+</div>
+
+<div class="daftar">
+    <h3>Daftar Warga</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="tabelWarga"></tbody>
+    </table>
+
+    <h3>Jadwal Ronda</h3>
+    <ul id="jadwal"></ul>
+
+</div>
+
+</div>
+
+<script src="assets/script/script.js"></script>
+
+<footer>
+    <p>Web Smart Ronda Scheduler 2026, Kelompok (no) PROD</p>
+</footer>
+    
+</body>
+</html>
